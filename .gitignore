@@ -1,0 +1,5 @@
+.settings/
+build/
+llvm-project/
+compile_commands.json
+
