@@ -10,7 +10,8 @@ checkout:
 #	cd llvm/tools/clang/tools; svn co https://llvm.org/svn/llvm-project/clang-tools-extra/trunk extra
 #	cd llvm/projects; svn co https://llvm.org/svn/llvm-project/compiler-rt/trunk compiler-rt
 	rm -rf llvm-project
-	git clone --depth=1 https://github.com/llvm/llvm-project.git
+	git clone https://github.com/llvm/llvm-project.git
+	cd llvm-project; git checkout release/23.x
 
 .PHONY: llvm-config
 llvm-config:
