@@ -17,7 +17,7 @@ checkout:
 llvm-config:
 	rm -rf build
 	mkdir -p build
-	cd build; cmake ../llvm-project/llvm/ -DLLVM_ABI_BREAKING_CHECKS=FORCE_OFF -DCMAKE_BUILD_TYPE=Release -DLLVM_ENABLE_EH=ON -DLLVM_ENABLE_RTTI=ON -DLLVM_CCACHE_BUILD=ON -DLLVM_LINK_LLVM_DYLIB=ON -DLLVM_BUILD_LLVM_DYLIB=ON -DLLVM_ENABLE_PROJECTS=clang -G "Unix Makefiles" 
+	cd build; cmake ../llvm-project/llvm/ -DLLVM_ABI_BREAKING_CHECKS=FORCE_OFF -DCMAKE_BUILD_TYPE=Release -DLLVM_ENABLE_EH=ON -DLLVM_ENABLE_RTTI=ON -DLLVM_CCACHE_BUILD=ON -DLLVM_ENABLE_PROJECTS=clang -DBUILD_SHARED_LIBS=ON -G "Unix Makefiles" 
 	cd build; cp  compile_commands.json ../
 
 .PHONY: llvm
